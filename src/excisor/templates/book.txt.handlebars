@@ -1,0 +1,8 @@
+{{{title}}}
+{{{authors}}}
+{{#each highlights}}{{#unless isNoteOnly}}
+{{{text}}}{{/unless}}{{#if note}}
+NOTE: {{{note}}}{{/if}}
+LOCATION: {{{location.value}}}
+{{else}}You have no highlights for this book yet.
+{{/each}}

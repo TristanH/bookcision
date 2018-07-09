@@ -1,0 +1,54 @@
+/*!
+ * Bootstrap v2.3.1
+ *
+ * Copyright 2012 Twitter, Inc
+ * Licensed under the Apache License v2.0
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Designed and built with all the love in the world @twitter by @mdo and @fat.
+ *
+ */
+
+// This forces us to wrap any html in this project (that wants to make use of
+// bootstrap's CSS) in an element with the 'bootstrap' tag. This keeps
+// bootstrap's CSS contained to the bookmarklet... we wouldn't want to
+// radically alter Amazon's CSS.
+.bootstrap {
+  // --------------------------------------------------
+  // Include bootstrap
+  // --------------------------------------------------
+
+  // Core variables and mixins
+  @import "../../vendor/bootstrap-2.3.1/less/variables.less"; // Modify this for custom colors, font-sizes, etc
+  @import "../../vendor/bootstrap-2.3.1/less/mixins.less";
+
+  // CSS Reset
+  @import "../../vendor/bootstrap-2.3.1/less/reset.less";
+
+  // To enable bootstrap buttons which are used for the "Download" button
+  @baseLineHeight: 20px;
+  @baseBorderRadius: 4px;
+  // @import "../../vendor/bootstrap-2.3.1/less/forms.less";
+  @import "../../vendor/bootstrap-2.3.1/less/buttons.less";
+  @import "../../vendor/bootstrap-2.3.1/less/button-groups.less";
+  // @import "../../vendor/bootstrap-2.3.1/less/popovers.less";
+  @import "../../vendor/bootstrap-2.3.1/less/dropdowns.less";
+
+  // --------------------------------------------------
+  // Declare any overrides
+  // --------------------------------------------------
+
+  // We nest again b/c the line-height override below is setting the line-height on the button above.  @TODO Investigate!
+  .bookcision-feedback-containerElement {
+    // To enable bootstrap progress bar which is used for the feedback UI
+    @baseLineHeight: 10px;
+    @baseBorderRadius: 0px;
+    @import "bootstrap-progress-bars.less";
+  }
+
+  // Work around https://github.com/zeroclipboard/ZeroClipboard/issues/237
+  .btn {
+    position: relative;
+    z-index: 7500; /* Higher than modal dialog, lower than feedback */
+  }
+}

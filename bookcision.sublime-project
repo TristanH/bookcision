@@ -1,0 +1,21 @@
+{
+	"folders":
+	[
+		{
+			"file_exclude_patterns": ["*.sublime-workspace"],
+
+			"folder_exclude_patterns":
+			[
+				".hg",
+				"node_modules",
+				"obj",
+				"web_modules",
+				"dest"
+			],
+
+			"binary_file_patterns": ["*.jpg", "*.jpeg", "*.png", "*.gif", "*.ttf", "*.tga", "*.dds", "*.ico", "*.eot", "*.pdf", "*.swf", "*.jar", "*.zip"],
+
+			"path": "/C/src/bookcision"
+		}
+	]
+}

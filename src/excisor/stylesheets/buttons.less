@@ -1,0 +1,15 @@
+// Hide the download button if browser doesn't support the file system APIs, since
+// we can't generate the file for download (which are Chrome only, for now).
+.no-file-system .bookcision-book .download-button-group {
+  display: none;
+}
+
+.bookcision-book {
+  .download-button-group, .bookcision-copy-to-clipboard {
+    float: right;
+
+    // @TODO Investigate
+    margin-top: 5px;
+    margin-right: 20px;
+  }
+}

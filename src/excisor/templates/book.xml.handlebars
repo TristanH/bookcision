@@ -1,0 +1,11 @@
+<book>
+  <title>{{title}}</title>
+  <authors>{{authors}}</authors>
+  <highlights>{{#each highlights}}
+    <highlight isNoteOnly="{{$toString isNoteOnly}}">{{#unless isNoteOnly}}
+      <text>{{text}}</text>{{/unless}}
+      <location url="{{location.url}}">{{location.value}}</location>{{#if note}}
+      <note>{{note}}</note>{{/if}}
+    </highlight>{{/each}}
+  </highlights>
+</book>

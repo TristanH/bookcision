@@ -1,0 +1,11 @@
+doctype
+html
+  head
+    title= pkg.name
+  body
+    a#bookmarklet(href="javascript:void(0)") #{pkg.name}
+    |  - Drag this link to your bookmark bar
+    if (typeof debug === "undefined")
+      script(src="bookmarklet.js")
+    else
+      script(src="bookmarklet.debug.js")

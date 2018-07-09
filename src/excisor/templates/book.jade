@@ -1,0 +1,30 @@
+div.bootstrap.bookcision-book
+  unless highlights.length === 0
+    div.button-with-dropdown.download-button-group.btn-group
+      button.btn.bookcision-download-as-text
+        i.icon-download
+        |  Download
+      button.btn.dropdown-toggle
+        span.caret
+      ul
+        li.bookcision-download-as-text
+          span as plain text
+        li.bookcision-download-as-xml
+          span as XML
+        li.last.bookcision-download-as-json
+          span as JSON
+    button.btn.bookcision-copy-to-clipboard
+      i.icon-copy
+      |  Copy to clipboard
+
+  span.bookcision-header
+    h1= title
+    h2 #{authors}
+
+  if highlights.length === 0
+    p.bookcision-no-highlights You have no highlights for this book yet.
+  else
+    ul.bookcision-highlights
+      each highlight in highlights
+        li
+          include highlight

@@ -1,0 +1,48 @@
+// @TODO Wrapper necessary?
+ul.bookcision-highlights {
+  li p {
+    padding-left: 10px;
+    border-left: 4px solid #ccc;
+    // text-align: justify;
+  }
+
+  li p.bookcision-highlight-note {
+    font-weight: bold;
+    font-size: 14px;
+    border-left-color: #777;
+  }
+
+  p.bookcision-note-context {
+    color: #999;
+    font-style: italic;
+  }
+
+  p.bookcision-highlight.with-note, p.bookcision-note-context {
+    padding-bottom: 5px;
+  }
+
+  p.bookcision-note-context::after {
+    content: " …";
+  }
+
+  p.bookcision-note-context::before {
+    content: "… ";
+  }
+
+  .bookcision-location {
+    text-align: right;
+    border-left-style: none;
+    margin-top: 5px;
+  }
+
+  a:link, a:hover, a:visited {
+    font-size: 12px;
+    text-decoration: underline;
+  }
+  a:link {
+    color: #777;
+  }
+  a:hover, a:visited {
+    color: #999;
+  }
+}

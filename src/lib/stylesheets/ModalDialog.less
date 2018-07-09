@@ -1,0 +1,58 @@
+.bookcision-ModalDialog-fixedWrapper {
+  background-color: rgba(0, 0, 0, 0.1); // gray out the rest of the page
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  max-width: 100%;
+  max-height: 100%;
+  text-align: center;
+  z-index: 5000; /* High, but lower than feedback */
+}
+
+.bookcision-ModalDialog-containerElement {
+  background-color: white;
+
+  margin: auto;
+  width: 850px;
+  height: 100%;
+
+  padding: 30px;
+  box-sizing: border-box; // Make it so that the padding & border are included in
+  // the width and height instead of being added to it; so
+  // that we don't go over 100% width/height.
+
+  overflow: auto;
+
+  text-align: left;
+  font-family: Georgia, "Times New Roman", Times, serif;
+
+  position: relative; // Must be positioned to become offsetParent of
+  // closeButton; so that can be positioned absolutely
+  // relative to this container element
+}
+
+.bookcision-ModalDialog-containerElement,
+.bookcision-ModalDialog-containerElement ul {
+  color: black;
+}
+
+.bookcision-ModalDialog-closeButton {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-right: 10px;
+  font-size: 4em;
+  line-height: 1;
+  cursor: pointer;
+  color: #ccc;
+}
+
+.bookcision-ModalDialog-closeButton:hover {
+  color: black;
+}
+
+.bookcision-ModalDialog-containerElement ul, .bookcision-ModalDialog-containerElement li {
+  list-style-type: none !important;
+}

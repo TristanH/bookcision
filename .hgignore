@@ -1,0 +1,16 @@
+syntax: glob
+re:^bookcision\.sublime-workspace$
+re:^aws\.json$
+re:^dest/
+re:^node_modules/
+re:^node_modules.bak/
+re:^build/
+re:^src\excisor\npm-debug\.log$
+re:^azure.json$
+re:^rollbar.json$
+EnableCorsInAzure/EnableCorsConsole/bin/
+EnableCorsInAzure/EnableCorsConsole/obj/
+EnableCorsInAzure/packages/
+EnableCorsInAzure\EnableCorsConsole\azure.config
+*.suo
+obj/

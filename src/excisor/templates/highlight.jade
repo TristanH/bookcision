@@ -1,0 +1,11 @@
+if !highlight.isNoteOnly
+  if highlight.note
+    p.bookcision-highlight.with-note= highlight.text
+  else
+    p.bookcision-highlight.without-note= highlight.text
+
+if highlight.note
+  p.bookcision-highlight-note= highlight.note
+
+p.bookcision-location
+  a(href!="#{highlight.location.url}") Location: #{highlight.location.value}

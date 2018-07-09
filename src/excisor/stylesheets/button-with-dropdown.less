@@ -1,0 +1,72 @@
+.bookcision-book {
+  @import "../../vendor/bootstrap-2.3.1/less/variables.less";
+  @import "../../vendor/bootstrap-2.3.1/less/mixins.less";
+
+  @background-color: #D0D0D0;
+  @submenu-background-color: #767878;
+  @submenu-background-color-hover: #494949;
+  @submenu-text-color: #FFFFFF;
+  @downarrow-color: #FF0000;
+
+  *, .btn {
+    text-shadow: none;
+  }
+
+  ul {
+    margin: 0;
+  }
+
+  .button-with-dropdown li {
+    background: @background-color;
+    color: @submenu-text-color;
+    text-align: right;
+    font-family: Helvetica, Arial, Verdana, sans-serif;
+    font-size: 12px;
+    line-height: 49px;
+    padding: 0 20px;
+    text-decoration: none;
+  }
+
+  .button-with-dropdown ul {
+    list-style: none;
+    cursor: pointer;
+  }
+
+  .button-with-dropdown ul > li:last-child {
+    .border-bottom-left-radius(@baseBorderRadius);
+    .border-bottom-right-radius(@baseBorderRadius);
+  }
+
+  .button-with-dropdown ul > li.active {
+    background: @background-color;
+  }
+
+  .button-with-dropdown ul > li:hover {
+    background: @background-color;
+  }
+
+  .button-with-dropdown .dropdown-toggle {
+    z-index: 1;
+  }
+
+  .button-with-dropdown .dropdown-toggle + ul {
+    display: none;
+    position: absolute;
+    min-width: 100px;
+    top: 100%;
+    right: 0;
+  }
+
+  .button-with-dropdown .dropdown-toggle + ul li {
+    background: @submenu-background-color;
+    filter: none;
+    font-size: 12px;
+    display: block;
+    line-height: 120%;
+    padding: 10px;
+  }
+
+  .button-with-dropdown .dropdown-toggle + ul li:hover {
+    background: @submenu-background-color-hover;
+  }
+}

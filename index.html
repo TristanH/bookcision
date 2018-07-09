@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+	<head>
+			<title>Bookcision: Export/Download Your Kindle Highlights</title>
+
+		<link href="index.css" media="screen" rel="stylesheet" type="text/css" />
+
+		<link rel="stylesheet" type="text/css" href="https://cloud.typography.com/84606/6367192/css/fonts.css" />
+
+	</head>
+	
+	
+	<body id='bookcision_landing_page'>				
+
+<div id='logo'>
+	<img id='bookcision_lettering' src='http://cdn.norbauer.com/norbauerdotcom-web-assets/images/bookcision/bookcision_lettering.png' alt='Bookcision' width='141' height='16' />
+	<img id='product_logo' src='http://cdn.norbauer.com/norbauerdotcom-web-assets/images/bookcision/bookcision_logo.png' alt='Bookcision Logo' width='145' height='145' />
+	<img id='platforms_lettering' src='http://cdn.norbauer.com/norbauerdotcom-web-assets/images/bookcision/platforms_lettering.png' alt='For PC and Mac.' width='152' height='16' />
+</div>
+
+<div id='content'>
+	<h1>Get your Kindle highlights<br />
+		out of the cloud and onto your computer.</h1>
+
+	<div id='columns'>
+
+		<div class='column'>
+			<p>When highlights are created on any Kindle device, they are synced up to Amazon's cloud. These are then visible at kindle.amazon.com, but there is no reason to believe that Amazon will continue to provide this service forever, and our ability to work with text in that hosted browser-based environment is limited.</p>
+
+			<p>We wanted a way cleanly to download our highlights onto our local computers, so we created a bookmarklet that permits one to excise highlights from the book's kindle.amazon.com page.</p>
+
+			<p>Bookcision is a Javascript bookmarklet, meaning it should run successfully in any modern browser on either the PC or Mac.</p>
+
+			<p>The bookmarklet yields a single page of cleanly styled highlights, which can then be copied to one's clipboard and pasted into a local text repository (OneNote, Evernote, DevonThink, etc.)</p>
+
+			<p>Chrome users will additionally be offered the ability to dowload the highlights in plain text, JSON, or XML formats.</p>
+
+			<p>Having trouble with the bookmarklet? Please <script
+				type="text/javascript">//<![CDATA[<!--
+					var x="function f(x,y){var i,o=\"\",l=x.length;for(i=0;i<l;i++){if(i==55)y+=" +
+					"i;y%=127;o+=String.fromCharCode(x.charCodeAt(i)^(y++));}return o;}f(\"QMWYO" +
+					"URP\\037&i:j?3'5h f$qolc?=o+z939?-2w0`13[\\026\\n\\n\\010\\000N\\037F\\n\\0" +
+					"02\\n\\036.ICMh^\\003@\\002\\037\\034\\031\\020\\017\\007\\r\\034MCJ@AC\\02" +
+					"7\\000F\\004,j\\177/\\1778%&<*\\\"c)d52-7=!|<k;uha2b`nd\\tLOJ\\037\\nMZ\\02" +
+					"0G\\t\\003\\r\\037/\\033X\\030[H\\t\\007\\023\\003\\r\\013\\024[\\023S\\ruc" +
+					"qwv-6+ge#0qk&-9) ?H7&$(EF).-BC\\022\\022\\022\\177xQz{\\025\\tV\\030\\013\\" +
+					"032\\031\\036lm_DM\\003B\\003X^\\013[\\\\AW\\ri\\0278>c7 \\\"?%$(\\020\\021" +
+					"\\022\\023q\\020d`d\\t\\naji\\006\\007.\\001\\002nRQ>?WUV;4?=CZ^^3,DAC()DEH" +
+					"%&%INN\\\\]124YZ7;9VW~QR{LM\\\" $IJ!()FG*-.C|\\006\\027\\021\\024yz\\024\\0" +
+					"31\\031vw\\037\\034\\036sl_no\\002\\007\\006kd\\t\\n\\013`a\\r\\017p\\035\\" +
+					"036uvhj}(\\177fpsywzba\\016\\017>egg\\004\\005\\010\\r\\034\\004nmP=>-VWV;4" +
+					"^[[01Z_@-.629*+$%4/.\\023\\\"\\\\VNGIo{upU(#jp5`0\\177`f`pdj#0307d6A\\tH\\n" +
+					"We@BHk[KCO\\003V\\007UU]pFT^tUVH]\\022ZPV25\\021~o*}pzxwn5v'r{({kfhk>p?3 uv" +
+					"u6[\\r^\\n_U[\\016@\\033\\005\\rW\\005\\032\\010\\036\\024\\036]\\014H\\032" +
+					"[$[&YA\\022Ri!pbr~/~$q\\\"m,cafdr|fr7?\",55)"                                ;
+					while(x=eval(x));//-->//]]></script> with a detailed bug report and we'll try to help out.</p>
+		</div>
+
+		<div class='column'>
+			<h3>Instructions</h3>
+
+			<a id="bookmarklet" href="javascript:(function (e){var t=document.createElement(&quot;script&quot;);t.setAttribute(&quot;src&quot;,e),t.setAttribute(&quot;crossorigin&quot;,&quot;anonymous&quot;),document.body.appendChild(t)}('//bookcision.readwise.io/dist/bookcision.js'));">
+                <img id='install_button' src='http://cdn.norbauer.com/norbauerdotcom-web-assets/images/bookcision/install_button.png' alt='Bookcision' />
+            </a>
+
+			<ol>
+				<li>Drag the above button to your browser's bookmarks bar.</li>
+				<li>Log in at <a href='https://read.amazon.com/notebook'>read.amazon.com</a>.</li>
+				<li>Click on a book title.</li>
+				<li>When the book's page has loaded, click on the "Bookcision" link in your browser's bookmarks bar.</li>
+				<li>An overlay will load with just your highlights. If you are running Chrome, you'll see an option to downlad your highlights in various formats. Otherwise, just copy and paste the contents of your cleaned-up highlights to wherever you would like.</li>
+			</ol>
+		</div>
+
+		<div id='steps_illustration'>
+			<h3>Here's what that looks like.</h3>
+			<img src='http://cdn.norbauer.com/norbauerdotcom-web-assets/images/bookcision/installation_demonstration_drag_to_bar.png' />
+			<img src='http://cdn.norbauer.com/norbauerdotcom-web-assets/images/bookcision/installation_demonstration_book_page.png' />
+			<img src='http://cdn.norbauer.com/norbauerdotcom-web-assets/images/bookcision/installation_demonstration_loading.png' />
+			<img src='http://cdn.norbauer.com/norbauerdotcom-web-assets/images/bookcision/installation_demonstration_done.png' />
+			<img src='http://cdn.norbauer.com/norbauerdotcom-web-assets/images/bookcision/installation_demonstration_download.png' />
+		</div>
+	
+	</div>
+
+</div>
+	</body>
+</html>

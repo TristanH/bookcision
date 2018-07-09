@@ -1,0 +1,609 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block
+}
+
+body {
+    line-height: 1
+}
+
+ol,
+ul {
+    list-style: none
+}
+
+blockquote,
+q {
+    quotes: none
+}
+
+blockquote:before,
+blockquote:after {
+    content: "";
+    content: none
+}
+
+q:before,
+q:after {
+    content: "";
+    content: none
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0
+}
+
+body {
+    font-size: 15px;
+    padding-bottom: 100px
+}
+
+em,
+i {
+    font-style: italic
+}
+
+strong,
+b {
+    font-weight: 700
+}
+
+p,
+li,
+blockquote,
+h1,
+h2,
+h3,
+h4,
+h5,
+label {
+    display: block;
+    line-height: 1.5rem;
+    font-family: 'Chronicle SSm A', 'Chronicle SSm B', Georgia, "Times New Roman", Times, serif;
+    font-weight: 300;
+    font-style: normal
+}
+
+p {
+    margin-bottom: 2rem
+}
+
+img {
+    max-width: 100%;
+    display: block;
+    margin: 0 auto
+}
+
+body {
+    text-align: center;
+    font-family: Georgia;
+    font-size: 14px
+}
+
+a {
+    border: 0;
+    color: #777
+}
+
+div#norbauer_logo_landing {
+    text-align: center
+}
+
+div#norbauer_logo_landing img#norbauer_logo {
+    margin-top: 75px;
+    width: 122px;
+    height: 119px
+}
+
+div#norbauer_logo_landing p#norbauer_logo_lettering {
+    font-size: 30px;
+    font-family: 'Chronicle Display A', 'Chronicle Display B';
+    font-weight: 300;
+    font-style: normal;
+    color: #787770;
+    text-transform: uppercase;
+    margin: 37px auto 0;
+    padding: 0 20px;
+    display: inline-block;
+    background-color: #fff
+}
+
+nav.apps {
+    height: 34px;
+    background-color: #666;
+    width: 100%
+}
+
+nav.apps ul {
+    max-width: 970px;
+    width: 80%;
+    margin: auto
+}
+
+nav.apps ul li#norbauer_nav_lettering {
+    float: left;
+    margin-top: 10px;
+    margin-left: 10px
+}
+
+nav.apps ul div#nav_items {
+    float: right;
+    height: 34px
+}
+
+nav.apps ul div#nav_items li {
+    margin-top: 5px;
+    font-family: 'Whitney SSm A', 'Whitney SSm B';
+    font-weight: 300;
+    font-style: normal;
+    text-transform: uppercase;
+    font-size: 12px;
+    margin-left: 20px;
+    float: left
+}
+
+nav.apps ul div#nav_items li a {
+    color: #ccc;
+    text-decoration: none
+}
+
+div.content_page {
+    max-width: 970px;
+    width: 80%;
+    margin: 20px auto
+}
+
+div.content_page img#norbauer_content_page_logo {
+    margin: 30px auto 35px
+}
+
+div.content_page div#content {
+    border-top: 1px #ccc solid;
+    border-bottom: 1px #ccc solid;
+    padding-bottom: 20px
+}
+
+div.content_page div#content h1 {
+    border-top: 1px #ccc solid;
+    border-bottom: 1px #ccc solid;
+    margin-top: 1px;
+    margin-bottom: 40px
+}
+
+div.content_page div#content h1 img#tagline {
+    margin: 24px auto 20px
+}
+
+div.content_page div#content p {
+    text-align: left;
+    width: 65%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 5%
+}
+
+h1 {
+    font-size: 1.7rem;
+	font-family: "Quarto A", "Quarto B", "Georgia";
+	font-style: normal;
+	font-weight: 700;
+    line-height: 1.4em;
+    border-top: 1px #ccc solid;
+    border-bottom: 1px #ccc solid;
+    margin: 2px auto 0;
+    padding: 30px 0
+}
+
+div#landing_page {
+    max-width: 970px;
+    width: 80%;
+    margin: -13px auto 0 auto;
+    border-top: 1px #ccc solid;
+    border-bottom: 3px #ccc solid
+}
+
+div#landing_page h1 {
+    padding: 33px 0 28px;
+    font-size: 1.5rem
+}
+
+div#landing_page div#app_list {
+    margin: 40px 0
+}
+
+div#landing_page div#app_list ul {
+    list-style-type: none
+}
+
+div#landing_page div#app_list ul li {
+    width: 28%;
+    display: inline-block
+}
+
+div#landing_page div#app_list ul img.logo {
+    margin-bottom: 21px
+}
+
+div#landing_page div#app_list ul a {
+    text-decoration: none;
+    color: #000
+}
+
+div#landing_page div#app_list ul a p {
+    margin-bottom: 0;
+    line-height: 1.2rem
+}
+
+div#landing_page div#app_list ul a p span.name {
+    display: block;
+    font-size: 1.5rem;
+    margin-bottom: 12px;
+    font-family: 'Chronicle Display A', 'Chronicle Display B';
+    font-weight: 300;
+    font-style: normal
+}
+
+div#landing_page div#app_list ul a p span.description {
+    font-size: .8rem;
+    font-family: 'Whitney SSm A', 'Whitney SSm B';
+    font-weight: 400;
+    font-style: normal
+}
+
+div#landing_page nav {
+    border-top: 1px #ccc solid;
+    margin: 0
+}
+
+div#landing_page nav ul {
+    border-top: 1px #ccc solid;
+    border-bottom: 3px #eee solid;
+    margin-top: 2px;
+    margin-bottom: 3px;
+    list-style-type: none
+}
+
+div#landing_page nav ul li {
+    display: inline-block;
+    font-size: .75rem;
+    font-family: 'Whitney SSm A', 'Whitney SSm B';
+    font-weight: 400;
+    font-style: normal;
+    text-transform: uppercase;
+    margin: 25px 20px
+}
+
+div#landing_page nav ul li a {
+    text-decoration: none;
+    color: #777
+}
+
+div#foot p {
+    margin: 25px 0;
+    font-size: .6rem;
+    color: #777;
+    font-style: italic
+}
+
+body#portcullis_landing_page,
+body#miskatonic_landing_page,
+body#bookcision_landing_page {
+    padding-bottom: 50px
+}
+
+body#portcullis_landing_page div#logo,
+body#miskatonic_landing_page div#logo,
+body#bookcision_landing_page div#logo {
+    margin: 50px auto 40px
+}
+
+body#portcullis_landing_page div#logo img,
+body#miskatonic_landing_page div#logo img,
+body#bookcision_landing_page div#logo img {
+    margin-bottom: 20px
+}
+
+body#portcullis_landing_page div#logo p,
+body#miskatonic_landing_page div#logo p,
+body#bookcision_landing_page div#logo p {
+    margin-top: 20px;
+    font-family: 'Chronicle Display A', 'Chronicle Display B';
+    font-weight: 300;
+    font-style: normal;
+    text-transform: uppercase;
+    font-size: 1.3rem;
+    letter-spacing: 2px
+}
+
+body#portcullis_landing_page div#content,
+body#miskatonic_landing_page div#content,
+body#bookcision_landing_page div#content {
+    margin: 30px auto;
+    border-top: 1px #ccc solid;
+    border-bottom: 1px #ccc solid;
+    max-width: 970px;
+    width: 80%
+}
+
+body#portcullis_landing_page div#content div#columns,
+body#miskatonic_landing_page div#content div#columns,
+body#bookcision_landing_page div#content div#columns {
+    border-bottom: 1px #ccc solid;
+    margin-bottom: 1px
+}
+
+body#portcullis_landing_page div#content div#columns div.column,
+body#miskatonic_landing_page div#content div#columns div.column,
+body#bookcision_landing_page div#content div#columns div.column {
+    display: inline-block;
+    width: 40%;
+    margin: 4.5% 4.5% 20px;
+    text-align: left;
+    vertical-align: text-top
+}
+
+body#portcullis_landing_page div#content div#columns div.column p u,
+body#miskatonic_landing_page div#content div#columns div.column p u,
+body#bookcision_landing_page div#content div#columns div.column p u {
+    border-bottom: 1px solid #ccc;
+    text-decoration: none;
+    padding-bottom: 1px
+}
+
+body#portcullis_landing_page div#content h3,
+body#miskatonic_landing_page div#content h3,
+body#bookcision_landing_page div#content h3 {
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding: 10px 0;
+    border-top: 1px dotted #ccc;
+    border-bottom: 1px dotted #ccc;
+    font-size: 1rem;
+    color: #666;
+    font-family: 'Gotham A', 'Gotham B';
+    font-weight: 300;
+    font-style: normal
+}
+
+body#portcullis_landing_page div#content ul,
+body#miskatonic_landing_page div#content ul,
+body#bookcision_landing_page div#content ul {
+    margin-top: 20px;
+    list-style: square outside none;
+    margin-left: 25px
+}
+
+body#portcullis_landing_page div#content ul li,
+body#miskatonic_landing_page div#content ul li,
+body#bookcision_landing_page div#content ul li {
+    display: list-item;
+    margin: 20px
+}
+
+body#portcullis_landing_page div#content div#email_list,
+body#miskatonic_landing_page div#content div#email_list,
+body#bookcision_landing_page div#content div#email_list {
+    margin-bottom: 1px;
+    border-bottom: 1px #ccc solid
+}
+
+body#portcullis_landing_page div#content div#email_list form,
+body#miskatonic_landing_page div#content div#email_list form,
+body#bookcision_landing_page div#content div#email_list form {
+    display: block;
+    margin: 40px auto 0;
+    width: 50%
+}
+
+body#portcullis_landing_page div#content div#email_list form label,
+body#miskatonic_landing_page div#content div#email_list form label,
+body#bookcision_landing_page div#content div#email_list form label {
+    font-size: 1.4rem;
+    display: block;
+    margin-bottom: 15px;
+    font-family: 'Chronicle Display A', 'Chronicle Display B';
+    font-weight: 300;
+    font-style: normal
+}
+
+body#portcullis_landing_page div#content div#email_list form input,
+body#miskatonic_landing_page div#content div#email_list form input,
+body#bookcision_landing_page div#content div#email_list form input {
+    padding: 5px;
+    text-align: center;
+    font-family: 'Whitney SSm A', 'Whitney SSm B', helvetica, arial, sans-serif;
+    font-weight: 400;
+    font-style: normal
+}
+
+body#portcullis_landing_page div#content div#email_list form input#email_textbox,
+body#miskatonic_landing_page div#content div#email_list form input#email_textbox,
+body#bookcision_landing_page div#content div#email_list form input#email_textbox {
+    color: #999
+}
+
+body#portcullis_landing_page div#content div#email_list form input#submit_button,
+body#miskatonic_landing_page div#content div#email_list form input#submit_button,
+body#bookcision_landing_page div#content div#email_list form input#submit_button {
+    background-color: #666;
+    color: #fff;
+    border: 1px solid #666
+}
+
+body#portcullis_landing_page div#content div#email_list p,
+body#miskatonic_landing_page div#content div#email_list p,
+body#bookcision_landing_page div#content div#email_list p {
+    color: #666;
+    margin-bottom: 40px;
+    font-size: 11px;
+    margin-top: 10px
+}
+
+body#bookcision_landing_page h3 {
+    font-weight: 700
+}
+
+body#bookcision_landing_page div#logo {
+    margin: 30px 0 40px;
+    line-height: 145px
+}
+
+body#bookcision_landing_page div#logo img {
+    margin: 0;
+    display: inline-block;
+    vertical-align: middle
+}
+
+body#bookcision_landing_page div#logo img#bookcision_lettering {
+    margin-right: 74px
+}
+
+body#bookcision_landing_page div#logo img#platforms_lettering {
+    margin-left: 69px
+}
+
+body#bookcision_landing_page img#install_button {
+    margin-bottom: 20px;
+    margin-top: 20px
+}
+
+body#bookcision_landing_page ol {
+    list-style: decimal outside none;
+    margin-left: 25px;
+    margin-top: 20px
+}
+
+body#bookcision_landing_page ol li {
+    display: list-item;
+    margin: 20px
+}
+
+body#bookcision_landing_page div#steps_illustration {
+    margin-bottom: 20px;
+    margin-top: -10px
+}
+
+body#bookcision_landing_page div#steps_illustration img {
+    display: block;
+    margin-bottom: 30px
+}
+
+body#bookcision_landing_page div#steps_illustration h3 {
+    margin-bottom: 20px
+}
+
+p#trademark_notice {
+    width: 50%;
+    font-size: 10px;
+    color: #777;
+    margin: 0 auto;
+    line-height: 1rem;
+    margin-bottom: 40px;
+    font-family: 'Whitney SSm A', 'Whitney SSm B', helvetica, arial, sans-serif;
+    font-weight: 300;
+    font-style: normal
+}
+
+p#trademark_notice a {
+    color: #777
+}

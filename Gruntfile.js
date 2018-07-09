@@ -18,7 +18,6 @@ module.exports = function(grunt) {
   };
 
   // Read in package.json and layer on some grunt-specific properties
-  var azure = grunt.file.readJSON('azure.json');
   var rollbar = grunt.file.readJSON('rollbar.json');
 
   var getBuiltFilesArray = function(type, dest) {
@@ -261,35 +260,6 @@ module.exports = function(grunt) {
       }
     },
 
-    // Tasks to deploy to CDN
-    env: {
-      azure: {
-        src: 'azure.json'
-      }
-    },
-
-    azureblob: {
-      options: {
-        containerName: 'bookcision',
-        containerOptions: { publicAccessLevel: 'Blob' },
-        metadata: { cacheControl: 'public, max-age=86400' } // 1 day
-        // ,copySimulation: true
-      },
-      'upload-this-version-js': {
-        options: { gzip: true },
-        files: getBuiltFilesArray('js', 'version')
-      },
-      'upload-this-version-non-js': {
-        files: getBuiltFilesArray('non-js', 'version')
-      },
-      'go-live-with-this-version-js': {
-        options: { gzip: true },
-        files: getBuiltFilesArray('js', 'latest')
-      },
-      'go-live-with-this-version-non-js': {
-        files: getBuiltFilesArray('non-js', 'latest')
-      }
-    },
 
     copy: {
       zeroclipboard: {
@@ -298,20 +268,20 @@ module.exports = function(grunt) {
       }
     },
 
-    'rollbar-sourcemap-download': {
-      options: {
-        access_token: rollbar.server_access_token,
-        version: '<%= pkg.version %>'
-      },
-      version:
-        'https://' +
-          azure.AZURE_STORAGE_ACCOUNT +
-          '.blob.core.windows.net/bookcision/<%= pkg.version %>/<%= pkg.moduleName %>.js',
-      latest:
-        'https://' +
-          azure.AZURE_STORAGE_ACCOUNT +
-          '.blob.core.windows.net/bookcision/latest/<%= pkg.moduleName %>.js'
-    },
+    // 'rollbar-sourcemap-download': {
+    //   options: {
+    //     access_token: rollbar.server_access_token,
+    //     version: '<%= pkg.version %>'
+    //   },
+    //   version:
+    //     'https://' +
+    //       azure.AZURE_STORAGE_ACCOUNT +
+    //       '.blob.core.windows.net/bookcision/<%= pkg.version %>/<%= pkg.moduleName %>.js',
+    //   latest:
+    //     'https://' +
+    //       azure.AZURE_STORAGE_ACCOUNT +
+    //       '.blob.core.windows.net/bookcision/latest/<%= pkg.moduleName %>.js'
+    // },
 
     hg_release: {
       options: {

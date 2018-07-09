@@ -12,24 +12,22 @@ module.exports = function(grunt) {
       );
     } else {
       grunt.task.run(
-        'env',
         'generate-banner',
         'clean',
         'build:src:test',
-        'hg_release:' + version,
         'readPackageJSON',
         'build:src:debug',
         'build:src:release',
         'build:bookmarklet'
       );
 
-      if (version === versionToNotRelease)
-        grunt.task.run(
-          'azureblob:upload-this-version-js',
-          'azureblob:upload-this-version-non-js',
-          'rollbar-sourcemap-download:version'
-        );
-      else grunt.task.run('azureblob', 'rollbar-sourcemap-download');
+      // if (version === versionToNotRelease)
+      //   grunt.task.run(
+      //     'azureblob:upload-this-version-js',
+      //     'azureblob:upload-this-version-non-js',
+      //     'rollbar-sourcemap-download:version'
+      //   );
+      // else grunt.task.run('azureblob', 'rollbar-sourcemap-download');
     }
   });
 };

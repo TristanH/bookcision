@@ -283,13 +283,6 @@ module.exports = function(grunt) {
     //       '.blob.core.windows.net/bookcision/latest/<%= pkg.moduleName %>.js'
     // },
 
-    hg_release: {
-      options: {
-        commit: 'v<%= version %>',
-        tag: 'v<%= version %>'
-      }
-    },
-
     // livereload server
     connect: {
       livereload: {

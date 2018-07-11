@@ -1,7 +1,7 @@
 {
   "name": "bookcision",
   "private": true,
-  "version": "4.0.4-4",
+  "version": "4.0.5",
   "engines": {
     "node": "0.10.35"
   },
@@ -12,11 +12,11 @@
     "note",
     "highlight"
   ],
-  "author": "Ryan Norbauer <ryan@norbauer.com> (http://ryan.norbauer.com)",
+  "author": "Readwise <hello+bookcision@readwise.io>, originally created by Ryan Norbauer (http://ryan.norbauer.com)",
   "bugs": {
-    "email": "ryan@norbauer.com"
+    "email": "hello+bookcision@readwise.io"
   },
-  "homepage": "http://www.norbauer.com/bookcision",
+  "homepage": "https://bookcision.readwise.io",
   "license": "MIT",
   "scripts": {
     "test": "grunt test"

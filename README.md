@@ -14,15 +14,18 @@ When highlights and notes are created on any Kindle device, they are synced up t
 
   1. git clone the project locally.
   1. Ensure you're using Node 0.10.35 (we recommend using [nvm](https://github.com/creationix/nvm) to do this)
-  1. npm install
+  1. cd into directory and `npm install`
+
+### Development
+* grunt test - some unit tests which currently pass
+* grunt build - writes everything to /dest dir. dest/bookcision.js should be a working bookmarklet!
+* grunt lr - livereload development using a fake local environment, nothing on Amazon
+* grunt clean
 
 ### Installing a module
 
 rm npm-shrinkwrap.json & npm i [MODULE] --save & npm shrinkwrap
 
-
-### Compiling changes locally
-Run `grunt build` -- dest/bookcision.js will be the compiled, working bookmarklet.
 
 ### Releasing a new version (for maintainers)
 

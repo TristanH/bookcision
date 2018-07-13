@@ -244,7 +244,7 @@ module.exports = function(grunt) {
           comments: 'some'
         },
         files: {
-          'dest/bookmarklet.js': ['src/bookmarklet.js']
+          'dest/bookmarklet.js': ['src/bookmarklet.js'],
         }
       }
     },
@@ -274,13 +274,9 @@ module.exports = function(grunt) {
     //     version: '<%= pkg.version %>'
     //   },
     //   version:
-    //     'https://' +
-    //       azure.AZURE_STORAGE_ACCOUNT +
-    //       '.blob.core.windows.net/bookcision/<%= pkg.version %>/<%= pkg.moduleName %>.js',
+    //     '',
     //   latest:
-    //     'https://' +
-    //       azure.AZURE_STORAGE_ACCOUNT +
-    //       '.blob.core.windows.net/bookcision/latest/<%= pkg.moduleName %>.js'
+    //     '',
     // },
 
     // livereload server

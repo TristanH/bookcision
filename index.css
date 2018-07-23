@@ -417,7 +417,7 @@ body#bookcision_landing_page div#logo p {
 body#portcullis_landing_page div#content,
 body#miskatonic_landing_page div#content,
 body#bookcision_landing_page div#content {
-    margin: 30px auto;
+    margin: 20px auto;
     border-top: 1px #ccc solid;
     border-bottom: 1px #ccc solid;
     max-width: 970px;
@@ -544,7 +544,7 @@ body#bookcision_landing_page h3 {
 }
 
 body#bookcision_landing_page div#logo {
-    margin: 30px 0 40px;
+    margin: 15px 0 30px;
     line-height: 145px
 }
 
@@ -606,4 +606,23 @@ p#trademark_notice {
 
 p#trademark_notice a {
     color: #777
+}
+
+#maintain-row {
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 20px;
+}
+
+.maintain-column {
+    display: inline-block;
+    width: 30%;
+    margin-left: 2px; /* Center the columns with the logo */
+}
+
+.maintain-column a {
+    font-weight: bold;
+    text-decoration: none;
+    padding: 20px 10px 20px 20px;
+    margin-left: -10px;
 }

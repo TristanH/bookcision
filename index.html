@@ -11,11 +11,36 @@
 	
 	
 	<body id='bookcision_landing_page'>				
+<nav class="apps">
+	<ul>
+	<div id="nav_items" style="float: left;">
+		<li><a href="https://norbauer.com">Created by Alan & Ryan Norbauer</a></li>
+	</div>
 
+		<div id="nav_items">
+			<li style="font-family: arial ; text-transform: initial;"><a href="https://readwise.io" target="_blank">Want to get the most out of your Kindle highlights? Try <b style="color: orange; text-decoration: underline;">Readwise</b></a></li>
+		</div>
+	</ul>
+</nav>
 <div id='logo'>
-	<img id='bookcision_lettering' src='http://cdn.norbauer.com/norbauerdotcom-web-assets/images/bookcision/bookcision_lettering.png' alt='Bookcision' width='141' height='16' />
-	<img id='product_logo' src='http://cdn.norbauer.com/norbauerdotcom-web-assets/images/bookcision/bookcision_logo.png' alt='Bookcision Logo' width='145' height='145' />
-	<img id='platforms_lettering' src='http://cdn.norbauer.com/norbauerdotcom-web-assets/images/bookcision/platforms_lettering.png' alt='For PC and Mac.' width='152' height='16' />
+	<img id='bookcision_lettering' src='images/bookcision_lettering.png' alt='Bookcision' width='141' height='16' />
+	<img id='product_logo' src='images/bookcision_logo.png' alt='Bookcision Logo' width='145' height='145' />
+	<img id='platforms_lettering' src='images/platforms_lettering.png' alt='For PC and Mac.' width='152' height='16' />
+</div>
+<div id='maintain-row'>
+	Open Source & Available on <a href="https://github.com/TristanH/bookcision" target="_blank" style="text-decoration: none;">Github</a>
+<!-- <div class='maintain-column'>
+Maintained by<br><a href="https://readwise.io" target="_blank">readwise.io</a>
+</div>
+
+<div class='maintain-column'>
+	Available on <br> <a href="https://github.com/TristanH/bookcision" target="_blank" style="text-decoration: underline;">Github</a>
+</div>
+
+<div class='maintain-column'>
+Created by<br><a href="https://norbauer.com" target="_blank">Ryan & Alan Norbauer</a>
+</div> -->
+
 </div>
 
 <div id='content'>
@@ -25,35 +50,19 @@
 	<div id='columns'>
 
 		<div class='column'>
-			<p>When highlights are created on any Kindle device, they are synced up to Amazon's cloud. These are then visible at kindle.amazon.com, but there is no reason to believe that Amazon will continue to provide this service forever, and our ability to work with text in that hosted browser-based environment is limited.</p>
 
-			<p>We wanted a way cleanly to download our highlights onto our local computers, so we created a bookmarklet that permits one to excise highlights from the book's kindle.amazon.com page.</p>
+		<p>When you highlight or note a Kindle-purchased book on any Kindle device app, those annotations are automatically synced with Amazon's cloud. These are then visible at <a href='https://read.amazon.com/notebook'>read.amazon.com</a>, but there is no reason to believe that Amazon will continue to provide this service forever, and our ability to work with text in that hosted browser-based environment is limited. </p>
 
-			<p>Bookcision is a Javascript bookmarklet, meaning it should run successfully in any modern browser on either the PC or Mac.</p>
+		<p>We wanted a way cleanly to download our highlights onto our local computers, so we created a bookmarklet that permits one to easily extract highlights from the book's <a href='https://read.amazon.com/notebook'>read.amazon.com</a> page.</p>
 
-			<p>The bookmarklet yields a single page of cleanly styled highlights, which can then be copied to one's clipboard and pasted into a local text repository (OneNote, Evernote, DevonThink, etc.)</p>
+		<p>Bookcision is a Javascript bookmarklet, meaning it should run successfully in any modern browser on either the PC or Mac.</p>
 
-			<p>Chrome users will additionally be offered the ability to dowload the highlights in plain text, JSON, or XML formats.</p>
+		<p>The bookmarklet yields a single page of cleanly styled highlights, which can then be copied to one's clipboard and pasted into a local text repository (OneNote, Evernote, DevonThink, etc.)</p>
 
-			<p>Having trouble with the bookmarklet? Please <script
-				type="text/javascript">//<![CDATA[<!--
-					var x="function f(x,y){var i,o=\"\",l=x.length;for(i=0;i<l;i++){if(i==55)y+=" +
-					"i;y%=127;o+=String.fromCharCode(x.charCodeAt(i)^(y++));}return o;}f(\"QMWYO" +
-					"URP\\037&i:j?3'5h f$qolc?=o+z939?-2w0`13[\\026\\n\\n\\010\\000N\\037F\\n\\0" +
-					"02\\n\\036.ICMh^\\003@\\002\\037\\034\\031\\020\\017\\007\\r\\034MCJ@AC\\02" +
-					"7\\000F\\004,j\\177/\\1778%&<*\\\"c)d52-7=!|<k;uha2b`nd\\tLOJ\\037\\nMZ\\02" +
-					"0G\\t\\003\\r\\037/\\033X\\030[H\\t\\007\\023\\003\\r\\013\\024[\\023S\\ruc" +
-					"qwv-6+ge#0qk&-9) ?H7&$(EF).-BC\\022\\022\\022\\177xQz{\\025\\tV\\030\\013\\" +
-					"032\\031\\036lm_DM\\003B\\003X^\\013[\\\\AW\\ri\\0278>c7 \\\"?%$(\\020\\021" +
-					"\\022\\023q\\020d`d\\t\\naji\\006\\007.\\001\\002nRQ>?WUV;4?=CZ^^3,DAC()DEH" +
-					"%&%INN\\\\]124YZ7;9VW~QR{LM\\\" $IJ!()FG*-.C|\\006\\027\\021\\024yz\\024\\0" +
-					"31\\031vw\\037\\034\\036sl_no\\002\\007\\006kd\\t\\n\\013`a\\r\\017p\\035\\" +
-					"036uvhj}(\\177fpsywzba\\016\\017>egg\\004\\005\\010\\r\\034\\004nmP=>-VWV;4" +
-					"^[[01Z_@-.629*+$%4/.\\023\\\"\\\\VNGIo{upU(#jp5`0\\177`f`pdj#0307d6A\\tH\\n" +
-					"We@BHk[KCO\\003V\\007UU]pFT^tUVH]\\022ZPV25\\021~o*}pzxwn5v'r{({kfhk>p?3 uv" +
-					"u6[\\r^\\n_U[\\016@\\033\\005\\rW\\005\\032\\010\\036\\024\\036]\\014H\\032" +
-					"[$[&YA\\022Ri!pbr~/~$q\\\"m,cafdr|fr7?\",55)"                                ;
-					while(x=eval(x));//-->//]]></script> with a detailed bug report and we'll try to help out.</p>
+		<p>Chrome users will additionally be offered the ability to download the highlights in plain text, JSON, or XML formats.</p>
+
+		<p>Having trouble with the bookmarklet? Bookcision is maintained by <a href="https://readwise.io">Readwise</a> — please <a href="mailto:hello+bookcision@readwise.io">drop us a note</a> with a detailed bug report and we'll try to help out.</p>
+
 		</div>
 
 		<div class='column'>
@@ -68,17 +77,18 @@
 				<li>Log in at <a href='https://read.amazon.com/notebook'>read.amazon.com</a>.</li>
 				<li>Click on a book title.</li>
 				<li>When the book's page has loaded, click on the "Bookcision" link in your browser's bookmarks bar.</li>
-				<li>An overlay will load with just your highlights. If you are running Chrome, you'll see an option to downlad your highlights in various formats. Otherwise, just copy and paste the contents of your cleaned-up highlights to wherever you would like.</li>
+				<li>An overlay will load with just your highlights. If you are running Chrome, you'll see an option to download your highlights in various formats. Otherwise, just copy and paste the contents of your cleaned-up highlights to wherever you would like.</li>
+				<li>If you'd like a daily email resurfacing an assortment of your best Kindle highlights, check out <a href="https://readwise.io">https://readwise.io</a>.</li>
 			</ol>
 		</div>
 
 		<div id='steps_illustration'>
 			<h3>Here's what that looks like.</h3>
-			<img src='http://cdn.norbauer.com/norbauerdotcom-web-assets/images/bookcision/installation_demonstration_drag_to_bar.png' />
-			<img src='http://cdn.norbauer.com/norbauerdotcom-web-assets/images/bookcision/installation_demonstration_book_page.png' />
-			<img src='http://cdn.norbauer.com/norbauerdotcom-web-assets/images/bookcision/installation_demonstration_loading.png' />
-			<img src='http://cdn.norbauer.com/norbauerdotcom-web-assets/images/bookcision/installation_demonstration_done.png' />
-			<img src='http://cdn.norbauer.com/norbauerdotcom-web-assets/images/bookcision/installation_demonstration_download.png' />
+			<img src='images/installation_demonstration_drag_to_bar.png' />
+			<img src='images/installation_demonstration_book_page.png' />
+			<img src='images/installation_demonstration_loading.png' />
+			<img src='images/installation_demonstration_done.png' />
+			<img src='images/installation_demonstration_download.png' />
 		</div>
 	
 	</div>

@@ -6,6 +6,8 @@ Maintained by [Readwise](https://readwise.io)
 
 When highlights and notes are created on any Kindle device, they are synced up to Amazon's cloud. These are then visible at read.amazon.com, but there is no reason to believe that Amazon will continue to provide this service forever, and our ability to work with text in that hosted browser-based environment is limited. This is a bookmarklet that permits one to excise notes/highlights from read.amazon.com. It yields a single page of cleanly styled notes/highlights, which can then be copied to one's clipboard and pasted into a local text repository (OneNote, Evernote, DevonThink, etc.). The highlights and notes can also be downloaded in a number of formats (e.g. JSON).
 
+Forked from the [original repo on bitbucket](https://bitbucket.org/altano/bookcision/).
+
 # Contributing
 
 ## Workflow

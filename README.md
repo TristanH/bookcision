@@ -34,4 +34,4 @@ rm npm-shrinkwrap.json & npm i [MODULE] --save & npm shrinkwrap
   1. Bump the version number of Bookcision in package.json
   1. Run `grunt build`
   1. Copy dest/bookcision.js to dist/bookcision.js (replacing the old version)
-  1. That's it! The new version will be at dist/bookcision.js and automatically updated via Github's CDN as soon as the change is merged into master.
+  1. That's it! The new version will be at dist/bookcision.js and automatically updated via Github's CDN as soon as the change is merged into master. The bookcision website (where you install the bookmarklet) simply points at bookcision.readwise.io/dist/bookcision.js, which points at the github source code.

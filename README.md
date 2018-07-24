@@ -1,6 +1,6 @@
 # Bookcision
 
-Created by [Ryan Norbauer](http://ryan.norbauer.com/)
+Created by [Ryan & Alan Norbauer](http://norbauer.com/)
 
 Maintained by [Readwise](https://readwise.io)
 

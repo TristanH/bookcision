@@ -1,5 +1,7 @@
 # Bookcision
 
+Install and learn more at the [Project's Site](https://readwise.io/bookcision)
+
 Created by [Ryan & Alan Norbauer](http://norbauer.com/)
 
 Maintained by [Readwise](https://readwise.io)

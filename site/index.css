@@ -232,10 +232,10 @@ nav.apps ul div#nav_items {
 
 nav.apps ul div#nav_items li {
     margin-top: 5px;
-    font-family: 'Whitney SSm A', 'Whitney SSm B';
+    font-family: arial;
+    text-transform: initial;
     font-weight: 300;
     font-style: normal;
-    text-transform: uppercase;
     font-size: 12px;
     margin-left: 20px;
     float: left

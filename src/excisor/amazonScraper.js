@@ -68,22 +68,9 @@ module.exports = (function() {
     return deviceType;
   };
 
-  var extractContentLimitState = function() {
-    if (TEST) {
-      return null;
-    }
-
-    return typeof $ !== undefined
-      ? $('.kp-notebook-content-limit-state')
-          .last()
-          .val()
-      : null;
-  };
-
   return {
     findASIN: extractASIN,
     findUser: functional.memoize(extractUser),
     getAmazonDeviceType: functional.memoize(extractAmazonDeviceType),
-    getContentLimitState: extractContentLimitState,
   };
 })();

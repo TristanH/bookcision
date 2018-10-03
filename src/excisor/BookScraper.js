@@ -29,7 +29,10 @@ function BookScraper(options) {
     asin: options.asin,
     title: null,
     authors: null,
-    highlights: []
+    highlights: [],
+
+    contentLimitState: null,
+    nextPageStartToken: null,
   };
 
   this.queueNextChunkScraping();
@@ -44,13 +47,26 @@ BookScraper.prototype.queueNextChunkScraping = function() {
     amazonScraper.getAmazonDeviceType()
   );
 
-  var url = util.format(
-    'https://%s/kp/notebook?purpose=NOTEBOOK&amazonDeviceType=%s&appName=notebook&asin=%s&contentLimitState=%s',
-    this.host,
-    amazonScraper.getAmazonDeviceType(),
-    this.options.asin,
-    amazonScraper.getContentLimitState()
-  );
+  var url;
+  if (this.scrapedData.nextPageStartToken) {
+    url = util.format(
+      'https://%s/kp/notebook?asin=%s&contentLimitState=%s&token=%s',
+      this.host,
+      this.options.asin,
+      this.scrapedData.contentLimitState,
+      this.scrapedData.nextPageStartToken
+    );
+  }
+  else {
+    url = util.format(
+      'https://%s/kp/notebook?purpose=NOTEBOOK&amazonDeviceType=%s&appName=notebook&asin=%s&contentLimitState=&',
+      this.host,
+      amazonScraper.getAmazonDeviceType(),
+      this.options.asin
+    );
+  }
+   
+
 
   if (index !== 0) {
     url += '&index=' + index;
@@ -63,11 +79,15 @@ BookScraper.prototype.onChunkScraped = function(
   asin,
   title,
   authors,
-  highlights
+  highlights,
+  contentLimitState,
+  nextPageStartToken
 ) {
   var that = this;
   that.scrapedData.title = that.scrapedData.title || title;
   that.scrapedData.authors = that.scrapedData.authors || authors;
+  that.scrapedData.contentLimitState = contentLimitState;
+  that.scrapedData.nextPageStartToken = nextPageStartToken;
 
   if (highlights && highlights.length > 0) {
     log(
@@ -149,6 +169,7 @@ BookScraper.prototype.scrapeChunk = function(index, url) {
     function(scraper) {
       var highlights = [];
       var title, authors;
+      var contentLimitState, nextPageStartToken;
 
       if (options.failCallback) {
         scraper.on('error', function(err) {
@@ -157,7 +178,7 @@ BookScraper.prototype.scrapeChunk = function(index, url) {
       }
 
       scraper.on('dom', function() {
-        that.onChunkScraped(options.asin, title, authors, highlights);
+        that.onChunkScraped(options.asin, title, authors, highlights, contentLimitState, nextPageStartToken);
       });
 
       // <h3 class="a-spacing-top-small a-color-base kp-notebook-selectable kp-notebook-metadata">The Blank Slate: The Modern Denial of Human Nature</h3>
@@ -188,6 +209,19 @@ BookScraper.prototype.scrapeChunk = function(index, url) {
             options.onAuthors(authors);
           }
           scraper.removeListener('element', foundAuthors);
+        }
+      );
+
+      scraper.select(
+        '.kp-notebook-content-limit-state',
+        function(clsInput) {
+          contentLimitState = clsInput.attribs['value'];
+        }
+      );
+      scraper.select(
+        '.kp-notebook-annotations-next-page-start',
+        function(clsInput) {
+          nextPageStartToken = clsInput.attribs['value'];
         }
       );
 
@@ -260,6 +294,7 @@ BookScraper.prototype.scrapeChunk = function(index, url) {
           }
         }
       });
+
     }.bind(this)
   );
 };

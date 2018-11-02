@@ -4,6 +4,7 @@ module.exports = function(grunt) {
   require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
   require('matchdep').filter('grunt-*').forEach(grunt.loadNpmTasks);
 
+  var fs = require('fs');
   var path = require('path');
   var changeCase = require('change-case');
   var webpack = require('webpack');
@@ -18,7 +19,10 @@ module.exports = function(grunt) {
   };
 
   // Read in package.json and layer on some grunt-specific properties
-  var rollbar = grunt.file.readJSON('rollbar.json');
+  var rollbar = {};
+  if (fs.existsSync('rollbar.json')) {
+    rollbar = grunt.file.readJSON('rollbar.json');
+  }
 
   var getBuiltFilesArray = function(type, dest) {
     var srcPattern = type === 'js' ? '**/*.js' : '**/*!(.js)';

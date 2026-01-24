@@ -265,12 +265,6 @@ module.exports = function(grunt) {
     },
 
 
-    copy: {
-      zeroclipboard: {
-        src: 'node_modules/zeroclipboard/ZeroClipboard.swf',
-        dest: 'dest/ZeroClipboard.swf'
-      }
-    },
 
     // 'rollbar-sourcemap-download': {
     //   options: {

@@ -18,8 +18,6 @@ module.exports = function(grunt) {
         grunt.task.run('webpack:test', 'simplemocha');
       else if (subset2 === 'release') grunt.task.run('webpack:release');
       else grunt.task.run('webpack', 'simplemocha');
-
-      if (subset2 !== 'test') grunt.task.run('copy:zeroclipboard');
     }
   });
 };

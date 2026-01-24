@@ -1,58 +1,44 @@
 var util = require('util'),
-  css = require('lib/ui/css'),
-  Button = require('lib/ui/components/Button'),
-  ZeroClipboard = require('lib/ZeroClipboardWrapper');
+  Button = require('lib/ui/components/Button');
 
 function ClipboardButton(element, clipboardContent, callbacks) {
   Button.call(this, element);
 
-  var bootstrapButtonClasses = {
-    hoverClass: 'hover',
-    activeClass: 'active'
-  };
-  var clipboard = new ZeroClipboard(this._element, bootstrapButtonClasses);
   var buttonElement = this._element;
+  callbacks = callbacks || {};
 
-  var provideErrorMessageOnClipboardCopyAttempt = (function() {
-    // @TODO Find a function utility in npm with a .once() function (or write one)
-    var setOnce = false; // Make sure it only runs once, as it appears ZeroClipboard fires both the
-    // noflash and wrongflash events in the case of there being no Flash Player,
-    // and we don't want to bind two alerts to the button.
-
-    return function(message) {
-      if (!setOnce) {
-        setOnce = true;
-        clipboard.unglue(buttonElement);
-        buttonElement.addEventListener('click', function() {
-          alert(message);
+  buttonElement.addEventListener('click', function() {
+    // Use modern Clipboard API
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(clipboardContent)
+        .then(function() {
+          if (callbacks.complete) {
+            callbacks.complete();
+          }
+        })
+        .catch(function(err) {
+          console.error('Failed to copy to clipboard:', err);
+          alert('Failed to copy to clipboard. Please try selecting the text manually.');
         });
+    } else {
+      // Fallback for older browsers - use execCommand
+      var textArea = document.createElement('textarea');
+      textArea.value = clipboardContent;
+      textArea.style.position = 'fixed';
+      textArea.style.left = '-9999px';
+      document.body.appendChild(textArea);
+      textArea.select();
+      try {
+        document.execCommand('copy');
+        if (callbacks.complete) {
+          callbacks.complete();
+        }
+      } catch (err) {
+        console.error('Failed to copy to clipboard:', err);
+        alert('Failed to copy to clipboard. Please try selecting the text manually.');
       }
-    };
-  })();
-
-  // With ZeroClipboard, you can only have one handler per event, and
-  // first handler wins, so register all passed-in handlers first to
-  // allow them to take precedence.
-  for (var callbackName in callbacks) {
-    clipboard.on(callbackName, callbacks[callbackName]);
-  }
-
-  clipboard.on('load', function(client) {
-    clipboard.on('dataRequested', function(client, args) {
-      client.setText(clipboardContent);
-    });
-  });
-
-  clipboard.on('noflash', function(client, args) {
-    provideErrorMessageOnClipboardCopyAttempt(
-      'You must have Flash Player installed to copy to the clipboard.'
-    );
-  });
-
-  clipboard.on('wrongflash', function(client, args) {
-    provideErrorMessageOnClipboardCopyAttempt(
-      'You must upgrade your Flash Player to copy to the clipboard.'
-    );
+      document.body.removeChild(textArea);
+    }
   });
 }
 

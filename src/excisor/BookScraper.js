@@ -50,7 +50,7 @@ BookScraper.prototype.queueNextChunkScraping = function() {
   var url;
   if (this.scrapedData.nextPageStartToken) {
     url = util.format(
-      'https://%s/kp/notebook?asin=%s&contentLimitState=%s&token=%s',
+      'https://%s/notebook?asin=%s&contentLimitState=%s&token=%s',
       this.host,
       this.options.asin,
       this.scrapedData.contentLimitState,
@@ -59,9 +59,8 @@ BookScraper.prototype.queueNextChunkScraping = function() {
   }
   else {
     url = util.format(
-      'https://%s/kp/notebook?purpose=NOTEBOOK&amazonDeviceType=%s&appName=notebook&asin=%s&contentLimitState=&',
+      'https://%s/notebook?asin=%s&contentLimitState=&',
       this.host,
-      amazonScraper.getAmazonDeviceType(),
       this.options.asin
     );
   }

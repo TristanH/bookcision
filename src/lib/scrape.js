@@ -1,7 +1,11 @@
-var Parser = require('htmlparser2').WritableStream,
-  Cornet = require('cornet'),
-  http = require('http'),
-  hyperquest = require('hyperquest');
+var Parser = require('htmlparser2').Parser,
+  Cornet = require('cornet');
+
+// Detect if we're in a browser environment with fetch support
+var isBrowser = typeof window !== 'undefined' && typeof window.fetch === 'function';
+
+// Use native fetch in browser, node-fetch in Node.js
+var fetch = isBrowser ? window.fetch : require('node-fetch');
 
 function scrape(url, setupHook) {
   // console.log('scraping: ' + url);
@@ -11,27 +15,34 @@ function scrape(url, setupHook) {
     setupHook(cornet);
   }
 
-  var req = hyperquest.get(url);
-
-  req.pipe(new Parser(cornet));
-
-  req.on('response', function(res) {
-    var status = res.statusCode;
-    if (status < 200 || status >= 300) {
-      var err = Error(
-        'Received status code ' +
-          status +
-          ' ("' +
-          http.STATUS_CODES[status] +
-          '")'
-      );
-      req.emit('error', err);
+  var fetchOptions = {
+    method: 'GET',
+    headers: {
+      'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
     }
-  });
+  };
 
-  req.on('error', function(err) {
-    cornet.emit('error', err);
-  });
+  // Include cookies for same-origin requests in browser
+  if (isBrowser) {
+    fetchOptions.credentials = 'same-origin';
+  }
+
+  fetch(url, fetchOptions)
+    .then(function(response) {
+      if (!response.ok) {
+        throw new Error('Received status code ' + response.status + ' ("' + response.statusText + '")');
+      }
+      return response.text();
+    })
+    .then(function(html) {
+      // Parse the HTML and emit events to cornet
+      var parser = new Parser(cornet, { decodeEntities: false });
+      parser.write(html);
+      parser.end();
+    })
+    .catch(function(err) {
+      cornet.emit('error', err);
+    });
 
   return cornet;
 }
